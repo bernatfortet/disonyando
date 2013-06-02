@@ -1,0 +1,131 @@
+@import "style-global.less";
+
+body{ background:#ffffd8 }
+
+.ocr{ .fs(9px); font-family: "OCR A Std";}
+.bodoni{ font-family: "Bodoni Std Poster"; font-style:italic;}
+
+.purple{ color:#772345; }
+.blue-grey{ color:#6f7a83; }
+
+header{ width:1122px; margin:0 auto;}
+	.carousel{ width:100%; height:450px; margin:10px 0 0; background:url("http://payload159.cargocollective.com/1/0/2503/5497012/top_nav_flower.jpg") no-repeat center center;}
+	nav{ width:705px; margin:20px auto 0;
+		a{ padding:10px 12px; .purple; .ocr; text-decoration:none;
+			&:hover{ text-decoration:underline;}
+		}
+	}
+	.logo{ width:667px; height:116px; margin:20px auto; background:url("http://payload159.cargocollective.com/1/0/2503/5497012/logo_640.jpg") no-repeat; .ir;}
+
+	.category{ width:300px; margin:0 auto 20px;
+		.title{ .bodoni; .fs(28px); .tcenter; .purple;}
+		.desc{ .ocr; .blue-grey; .tcenter;}
+	}
+
+#content_container{ width:1122px; margin:0 auto;}
+	.project_thumb{ width:214px; height:266px; .rel; .fl; margin:0 13px 13px 0; background:url("../images/thumb.jpg") no-repeat; .anchor; .overflow;
+		&:nth-child(5n){ margin-right:0;}
+
+		
+		.thumb_title{ width:100%; @height:50px; height:@height; .abs; bottom:-@height; .background-image(linear-gradient(to bottom, #7ba7b2, #b7e6cf)); text-align:center; color:white; .bodoni; .anim;
+			.text{ padding:10px 0 6px; .block; }
+		}
+		.thumb_tag{ width:100%; height:25px; .abs; bottom:-50px; background:white; .overflow; .anim;
+			a{ padding:8px 5px; .ocr; .fl; .blue-grey;}
+		}
+	
+		&:hover{
+			.thumb_title{ bottom:25px; .anim }
+			.thumb_tag{ bottom:0; .anim;}
+		}
+	}
+
+	.project_title{ margin:25px auto 15px; .bodoni; .fs(16px); .purple; .tcenter; }
+
+	.project_content{ .ocr; .purple; font-size:11px; line-height:28px; .tcenter;
+		a{ color:#049cdb; text-decoration:none;
+			&:hover{ color:#049cdb; text-decoration:underline; }
+		}
+		img{ text-align:center; float:none;}
+	}
+
+	#maincontainer{ margin:10px 0 20px; padding:20px 0; border-top:1px solid #b48277; border-bottom:1px solid #b48277; .overflow;  }
+
+	p{ max-width:450px; margin:0 auto; text-align:left; }
+
+	//Slideshow
+	.slideshow_component{}
+
+		.slideshow_thumb{
+			a{ padding:0 !important; border:3px solid transparent !important; .op(0.4); color:black;}
+			a:active{ padding:0 !important; .op(1);}
+			a:hover{ border:3px solid #000 !important; .op(1); .anim;}
+			a.activeSlide{ .op(1); border:3px solid #000 !important;}
+		}
+
+		.slideshow_container{ width:100%; margin-bottom:10px;}
+
+		ul{ padding:3px; .overflow;}
+		.slideshow_thumb { .fl; margin:-3px 7px 7px -3px;
+			a{ display:block; padding:2px; background:none !important; border:1px solid transparent;
+				&:hover{ background:none !important; border:1px solid #ccc; }
+				&.activeSlide{ background:none; border:1px solid #ccc; }
+				&:active, &.activeSlide:active{ background:none !important; border:1px solid #ccc; }
+			}
+			img{ height:60px; display:block; margin:0; border:0;}
+		}
+		.slideshow_thumbs{ margin:0 auto;}
+
+
+//Cargo Styles 
+	.loader_holder {
+	    display: none;
+	    position: absolute;
+	    top: 8px; left: 8px;
+	    z-index: 3;
+	}
+
+	#nav_loadspin {
+	    display: none;
+	    position: fixed;
+	    top: 10px; left: 19px;
+	    z-index: 100;
+	}
+
+	.view_tag_info{ .hide; }
+
+	.slideshow_wrapper{ margin: 0 auto;}
+
+
+	a#fullscreen {
+	    background-color: #1a1a1a;
+	    background-image: url(/_gfx/fullscreen_open.png);
+	    background-repeat: no-repeat;
+	    background-position: 67px 3px;
+	    border: 1px solid #1a1a1a;
+	    color: #bbbbbb;
+	    display: block;
+	    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+	    font-size: 11px;
+	    line-height: 18px;
+	    height: 19px;
+	    padding: 0 4px 0 5px;
+	    margin: 5px auto;
+	    text-align: left;
+	    text-decoration: none;
+	    width: 74px;
+	}
+
+	a#fullscreen:hover {
+	    background-color: #fff;
+	    color: #000;
+	}
+
+	a#fullscreen:active {
+	    background-color: #fff;
+	    border: 1px solid #999;
+	    color: #666;
+	}
+
+.toolset { position:fixed; top:10px; right:10px; z-index:9999; }
+.excerpt{ display:none; }
