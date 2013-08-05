@@ -68,6 +68,9 @@ module.exports = function(grunt) {
 				files: {
 					'assets/scripts/script.js': 'assets/coffee/script.coffee', // 1:1 compile
 				},
+				options:{
+					bare: true
+				},
 				glob_to_multiple: {
 					expand: true,
 					flatten: true,
